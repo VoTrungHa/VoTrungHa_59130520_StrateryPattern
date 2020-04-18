@@ -30,8 +30,14 @@ public class QLSV {
     public ISoSanh<SinhVien> getSoSanh() {
         return soSanh;
     }
- 
+
     public void setSoSanh(ISoSanh<SinhVien> soSanh) {
+        this.soSanh = soSanh;
+    }
+ 
+    public void Sapxep()
+    { 
+         
          
     }
     
