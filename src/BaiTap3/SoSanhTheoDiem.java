@@ -5,14 +5,17 @@
  */
 package BaiTap3;
 
+import java.util.Comparator;
+
 /**
  *
  * @author hp-pc
  */
-public class SoSanhTheoDiem implements ISoSanh<SinhVien>{
-
+public class SoSanhTheoDiem implements ISoSanh<SinhVien>
+{ 
+ 
     @Override
-    public int soSanh(SinhVien o1, SinhVien o2) { 
+    public int soSanh(SinhVien o1, SinhVien o2) {
          if (o1.getDiemTB()> o2.getDiemTB()) {
                     return 1;
                 } else {
@@ -23,5 +26,5 @@ public class SoSanhTheoDiem implements ISoSanh<SinhVien>{
                     }
                 }
     }
-    
-}
+} 
+  

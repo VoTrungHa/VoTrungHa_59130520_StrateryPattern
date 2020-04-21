@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package BaiTap3;
-
+package BaiTap3; 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections; 
+import java.util.Comparator;
 /**
  *
  * @author hp-pc
@@ -16,8 +16,7 @@ import java.util.Collections;
 public class QLSV {
     
     ArrayList<SinhVien> dsSv=new ArrayList<>();
-    ISoSanh<SinhVien> soSanh;
- 
+    ISoSanh<SinhVien> soSanh; 
      
     public ArrayList<SinhVien> getDsSv() {
         return dsSv;
@@ -33,20 +32,20 @@ public class QLSV {
 
     public void setSoSanh(ISoSanh<SinhVien> soSanh) {
         this.soSanh = soSanh;
-    }
- 
+    } 
     public void Sapxep()
     { 
-         
-         
-    }
-    
-    
-    
+         Collections.sort(dsSv, new Comparator<SinhVien>() {
+            @Override
+            public int compare(SinhVien sv1, SinhVien sv2) {
+                 return soSanh.soSanh(sv1, sv2);
+            }
+        });
+    }  
     public void Inds()
     {
         for (SinhVien sinhVien : dsSv) {
-            System.out.println(dsSv.toString()+"\n");
+            System.out.println(sinhVien+"\n");
         }
     }
     
