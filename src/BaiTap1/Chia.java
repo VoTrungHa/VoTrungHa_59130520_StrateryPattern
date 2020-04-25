@@ -13,7 +13,20 @@ public class Chia implements Tinh{
 
     @Override
     public float tinh(float a, float b) {
-    return a/b;  
+        float chia=0;
+        try {
+            if(b==0)
+            {
+               throw new ArithmeticException("Không thể chia cho 0 !");
+            }
+            else
+            {
+                chia= a/b;  
+            } 
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage()); 
+        } 
+        return chia;
     }
     
 }

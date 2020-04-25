@@ -17,8 +17,8 @@ public class BaiTap1Main {
     public static void main(String[] args) {
         // TODO code application logic here
         context ct=new context();
-        ct.setTinhtoan(new Cong());
-        System.out.println("Tổng 75 + 12 = "+ct.tinh(75, 12));
+        ct.setTinhtoan(new Chia());
+        System.out.println("Tổng 75 + 12 = "+ct.tinh(75, 0));
         
          ct.setTinhtoan(new Tru());
         System.out.println("Hiệu: 54 - 78 = "+ct.tinh(54, 78));
